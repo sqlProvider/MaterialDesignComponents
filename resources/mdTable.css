@@ -1,0 +1,64 @@
+.md-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: transparent; }
+  .md-table > thead > tr,
+  .md-table > tbody > tr,
+  .md-table > tfoot > tr {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .md-table > thead > tr > th,
+    .md-table > thead > tr > td,
+    .md-table > tbody > tr > th,
+    .md-table > tbody > tr > td,
+    .md-table > tfoot > tr > th,
+    .md-table > tfoot > tr > td {
+      text-align: left;
+      padding: 15px;
+      vertical-align: top;
+      border-top: 0;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  .md-table > thead > tr > th {
+    color: #757575;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  .md-table > caption + thead > tr:first-child > th,
+  .md-table > caption + thead > tr:first-child > td,
+  .md-table > colgroup + thead > tr:first-child > th,
+  .md-table > colgroup + thead > tr:first-child > td,
+  .md-table > thead:first-child > tr:first-child > th,
+  .md-table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  .md-table > tbody + tbody {
+    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+
+.table-bordered {
+  border: 0; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > td {
+    border: 0;
+    border-bottom: 1px solid #E0E0E0; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td {
+    border-bottom-width: 1px; }
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #F5F5F5; }
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: rgba(0, 0, 0, 0.12); }
+
+/*# sourceMappingURL=mdTable.css.map */

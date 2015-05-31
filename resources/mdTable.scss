@@ -1,0 +1,87 @@
+@import "source/mixin";
+$tableHeaderFontColor: #757575;
+$tableCellPadding:     15px;
+$tableBg:              #FFF;
+$tableBgAccent:        #F5F5F5;
+$tableBgHover:         rgba(0,0,0,.12);
+$tableBgActive:        $tableBgHover;
+$tableBorderColor:     #E0E0E0;
+
+.md-table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: transparent;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      @include transition(all .3s ease);
+      > th,
+      > td {
+        text-align: left;
+        padding: $tableCellPadding;
+        vertical-align: top;
+        border-top: 0;
+        @include transition(all .3s ease);
+      }
+    }
+  }
+  > thead > tr > th {
+    color: $tableHeaderFontColor;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  > tbody + tbody {
+    border-top: 1px solid rgba(0,0,0,.12);
+  }
+}
+.table-bordered {
+  border: 0;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 0;
+        border-bottom: 1px solid $tableBorderColor;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+    }
+  }
+}
+.table-striped {
+  > tbody > tr:nth-child(even) {
+    > td,
+    > th {
+      background-color: $tableBgAccent;
+    }
+  }
+}
+.table-hover {
+  > tbody > tr:hover {
+    > td,
+    > th {
+      background-color: $tableBgHover;
+    }
+  }
+}
